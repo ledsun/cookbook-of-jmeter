@@ -2,14 +2,30 @@
 
 ## はじめに
 
+### 本文書の目的
+
 本文章は未経験者が Apache JMeter の使い方がわかることを目的としています。本書のゴールは以下の通りです。
 
 - JMeterの使い方を理解する
 - JMeterの用語を覚える
 
 対象とするJMeterはバージョン2.9以上です。
-JMeterの主な用途である負荷試験の設計方法は本書の対象外とします。
-またJavaの環境設定も取扱いません。
+
+次の項目は本書の対象外です。
+
+-　負荷試験の設計方法
+- Javaの環境設定方法
+
+### JMeterとは
+（主に）HTTPリクエストを送信する負荷試験ツールです。以下の点が好まれています。
+
++ Javaで作られているためWindows、Linux、Mac、いずれのOSでも動く
++ リクエスト生成機能がプラグインになっていて、対応しているリクエストが豊富
+（JDBC、FTP、JMS、LDAP、SOAP)
+
+### 参考情報
+[JMeter | TECHSCORE(テックスコア)](http://www.techscore.com/tech/Java/ApacheJakarta/JMeter/index/)がJMeterについて日本語でまとまっていて参考になります。
+
 
 ## 目次
 
