@@ -34,7 +34,9 @@
 1. [多すぎる機能（サンプラー）を減らす](3.shrink.md "多すぎる機能（サンプラー）を減らす")
 1. [見た目を見慣れたものにする](4.view.md "見た目を見慣れたものにする")
 1. [変数を定義する](5.variable.md "変数を定義する")
-1. [一定間隔でテストを実行する](6.beat.md "変数を定義する")
+1. [一定間隔でテストを実行する](6.beat.md "一定間隔でテストを実行する")
+1. [付録1:用語集](Appendix-1.term.md "付録1:用語集")
+1. [付録2:よくある質問と回答](Appendix-2.faq.md "付録2:よくある質問と回答")
 
 ## ライセンス
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ja"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
