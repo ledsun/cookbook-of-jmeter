@@ -1,5 +1,34 @@
 # よくある質問と回答
 
+### Q.-LオプションでログレベルをWARNに設定してもINFOログが出力されます。
+起動オプション-LでログレベルをWARNに設定してもINFOログが出力されます。
+
+```
+jmeter -LWARN
+```
+
+以下の順序で、指定したログレベル以上のログしか出ないのではないですか？
+
+```
+DEBUG　＜　INFO　＜　WARN　＜　ERROR　＜　FATAL
+```
+
+INFOログの出力を抑制するにはどうしたらいいでしょうか？
+
+#### A.ログレベルを上げるにはjmeter.propertiesを変更してください。
+-Lオプションではログレベルを下げることしかできません。
+binディレクトリにあるjmeter.propertiesのlog_level.jmeterをWARNに設定してください。
+
+```
+log_level.jmeter=WARN
+```
+
+ログレベルをDEBUGに下げる場合は-Lオプションが有効です。
+
+```
+jmeter -LDEBUG
+```
+
 ### Q. Throughputの計算式を教えてください。
 
 統計レポートに表示される、"Throughput"(スループット)の数値はどのように算出されていますか？
@@ -45,23 +74,3 @@ PostProcessorはアサーションより先に実行されるため、アサー�
 
 アサーション結果を確認するためのアサーションを追加してください。
 
-### Q.-Lオプションでログレベルを設定してもINFOログが出力されます。
-起動オプションでログレベルを設定してもINFOログが出力されます。
-
-```
-jmeter -LWARN
-```
-
-#### A.ログレベルを上げるにはjmeter.propertiesを変更してください。
--Lオプションではログレベルを下げることしかできません。
-binディレクトリにあるjmeter.propertiesのlog_level.jmeterをWARNに設定してください。
-
-```
-log_level.jmeter=WARN
-```
-
-ログレベルをDEBUGに下げる場合は-Lオプションが有効です。
-
-```
-jmeter -LDEBUG
-```
