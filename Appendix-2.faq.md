@@ -44,3 +44,24 @@ PostProcessorはアサーションより先に実行されるため、アサー�
 1. リスナー
 
 アサーション結果を確認するためのアサーションを追加してください。
+
+### Q.-Lオプションでログレベルを設定してもINFOログが出力されます。
+起動オプションでログレベルを設定してもINFOログが出力されます。
+
+```
+jmeter -LWARN
+```
+
+#### A.ログレベルを上げるにはjmeter.propertiesを変更してください。
+-Lオプションではログレベルを下げることしかできません。
+binディレクトリにあるjmeter.propertiesのlog_level.jmeterをWARNに設定してください。
+
+```
+log_level.jmeter=WARN
+```
+
+ログレベルをDEBUGに下げる場合は-Lオプションが有効です。
+
+```
+jmeter -LDEBUG
+```
