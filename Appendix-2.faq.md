@@ -32,18 +32,18 @@ jmeter -LDEBUG
 
 ### Q.jmeter.log以外に独自のログを出す方法はありませんか？
 テスト実行時に独自のログを出力して残したいです。
-log関数でjmeter.logに出力すると他のログと混じってしまいます。
-ログファイルを分けることは出来ないでしょうか？
+log.info関数でjmeter.logに出力すると他のログと混じってしまいます。
+専用のログファイルに出力することは出来ないでしょうか？
 
-#### A.this.interpreter.setOut関数でprint関数の出力先を変更してください。
-print関数の出力先を変える方法が簡単です。
+#### A.BeanShellのprint関数の出力先を変更してください。
+BeanShellを使う場合、print関数の出力先を変える方法が簡単です。
 
 ```
 f = new FileOutputStream("my_log.txt", true);
 p = new PrintStream(f, true, &quot;UTF-8&quot;);
 this.interpreter.setOut(p);
 ```
-以上のBeanShellコードでprint関数の出力先を、標準出力から「my_log.txt」に変更することができます。
+以上のソースコードでprint関数の出力先を、標準出力から「my_log.txt」に変更することができます。
 
 ## リスナーに関する質問
 
