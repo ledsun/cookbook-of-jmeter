@@ -1,5 +1,6 @@
 # よくある質問と回答
 
+## ログに関する質問
 ### Q.-LオプションでログレベルをWARNに設定してもINFOログが出力されます。
 起動オプション-LでログレベルをWARNに設定してもINFOログが出力されます。
 
@@ -29,9 +30,26 @@ log_level.jmeter=WARN
 jmeter -LDEBUG
 ```
 
+### Q.jmeter.log以外に独自のログを出す方法はありませんか？
+テスト実行時に独自のログを出力して残したいです。
+log関数でjmeter.logに出力すると他のログと混じってしまいます。
+ログファイルを分けることは出来ないでしょうか？
+
+#### A.this.interpreter.setOut関数でprint関数の出力先を変更してください。
+print関数の出力先を変える方法が簡単です。
+
+```
+f = new FileOutputStream("my_log.txt", true);
+p = new PrintStream(f, true, &quot;UTF-8&quot;);
+this.interpreter.setOut(p);
+```
+以上のBeanShellコードでprint関数の出力先を、標準出力から「my_log.txt」に変更することができます。
+
+## リスナーに関する質問
+
 ### Q. Throughputの計算式を教えてください。
 
-統計レポートに表示される、"Throughput"(スループット)の数値はどのように算出されていますか？
+「統計レポート」リスナーに表示される、"Throughput"(スループット)の数値はどのように算出されていますか？
 
 #### A. Samples を テスト所要時間  で割ったものです。
 
@@ -50,6 +68,8 @@ jmeter -LDEBUG
 1. 負荷を変更しながらスループットを取得する
 1. 負荷を上げてもスループットが上昇しなくなる負荷を探す
 1. その時に処理したリクエスト数でアプリケーションの性能を評価する
+
+## Processorに関する質問
 
 ### Q. Post-Processorsでアサーション結果が参照できません。
 
