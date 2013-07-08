@@ -41,7 +41,7 @@ ledsun
 1. [変数を定義する](5.variable.md "変数を定義する")
 1. [一定間隔でテストを実行する](6.beat.md "一定間隔でテストを実行する")
 1. [BeanShellでデバッグプリントする](7.print.md "BeanShellで出力する")
-1. [コマンドラインで実行する](8.command-line.md "コマンドラインで実行する")
+1. [GUIなしで実行する](8.non-gui.md "GUIなしで実行する")
 1. [付録1:用語集](Appendix-1.term.md "付録1:用語集")
 1. [付録2:よくある質問と回答](Appendix-2.faq.md "付録2:よくある質問と回答")
 
